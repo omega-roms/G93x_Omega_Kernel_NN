@@ -642,8 +642,8 @@ void services_compute_xperms_drivers(
 }
 
 /*
-+ * Compute access vectors and extended permissions based on a context
-+ * structure pair for the permissions in a particular class.
+ * Compute access vectors and extended permissions based on a context
+ * structure pair for the permissions in a particular class.
  */
 static void context_struct_compute_av(struct context *scontext,
 					struct context *tcontext,
@@ -1544,7 +1544,6 @@ out:
 #ifdef CONFIG_SECURITY_SELINUX_ALWAYS_ENFORCE
 	return -EACCES;
 #else
-// ] SEC_SELINUX_PORTING_COMMON
 	if (!selinux_enforcing)
 		return 0;
 	return -EACCES;
